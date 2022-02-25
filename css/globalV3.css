@@ -1,0 +1,241 @@
+@charset "utf-8";
+/*1 重定义浏览器默认样式
+	Name:			style_reset
+	Level:			Global
+	Explain:		重定义浏览器默认样式
+	Last Modify:	jackying
+*/
+
+/* 福特字体引入 start */
+/* 中文 */
+/* @font-face {
+    font-family: 'MHeiPRC-Medium';
+    src        : url('../fonts/fontV3/MHeiPRC-Medium.ttf') format("truetype");
+} */
+
+/* @font-face {
+    font-family: 'MHeiPRC-Heavy';
+    src        : url('../fonts/fontV3/MHeiPRC-Heavy.ttf') format("truetype");
+} */
+
+/* 推荐官中使用 */
+@font-face {
+    font-family: 'caf-Medium';
+    src        : url('../fonts/MHeiPRC-Xbold.ttf');
+}
+
+/* 英文 */
+/* @font-face {
+    font-family: 'Antenna-Medium';
+    src        : url('../fonts/fontV3/Antenna-Medium.ttf') format("truetype");
+} */
+
+/* 福特字体引入 end */
+
+* {
+    word-wrap   : break-word;
+    /* 解决滚动警告：Unable to preventDefault inside passive event listener */
+    touch-action: pan-y;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+iframe,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+button,
+input,
+textarea,
+th,
+td,
+fieldset {
+    margin                     : 0;
+    padding                    : 0;
+    outline                    : none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing        : border-box;
+    appearance        : none;
+    -webkit-appearance: none;
+}
+
+ul,
+ol,
+dl,
+li {
+    list-style-type: none
+}
+
+html,
+body {
+    *position: static;
+    width    : 100%;
+    height   : 100%;
+}
+
+html {
+    font-family           : -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue",STHeiti,"Microsoft Yahei",Tahoma,Simsun,sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust    : 100%;
+    font-size: 50px;
+    overflow : -moz-scrollbars-vertical;
+}
+
+body {
+    font-size     : 0.28rem !important;
+    color         : rgba(0, 0, 0, 0.85) !important;
+    line-height   : 1.5 !important;
+    background-color    : #F4F6F7 !important;
+    /* 适配iphone 底部小横条 */
+    padding-bottom: constant(safe-area-inset-bottom);
+    /*兼容 IOS<11.2*/
+    padding-bottom: env(safe-area-inset-bottom);
+    /*兼容 IOS>11.2*/
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style : normal;
+    font-weight: normal
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size  : inherit;
+    font-style : inherit;
+    font-weight: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing   : antialiased
+}
+
+input,
+button {
+    overflow      : visible;
+    vertical-align: middle;
+    outline       : none
+}
+
+body:before {
+    position       : fixed;
+    z-index        : -1;
+    top            : 0;
+    right          : 0;
+    bottom         : 0;
+    left           : 0;
+    background-size: cover;
+    /* background  : #000 !important; */
+    color          : #333333
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+
+a,
+area {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    cursor         : pointer
+}
+
+sub,
+sup {
+    vertical-align: baseline
+}
+
+/*img*/
+img {
+    border        : 0;
+    vertical-align: middle;
+}
+
+a img,
+img {
+    -ms-interpolation-mode: bicubic
+}
+
+.img-responsive {
+    max-width: 100%;
+    height   : auto
+}
+
+.am-list-item .am-input-control {
+    -webkit-flex: 1 !important;
+}
+
+.am-list-body:after {
+    display: none !important;
+}
+
+.am-list .am-list-item.am-textarea-item:after {
+    border-bottom: 1px solid #fff !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.btn_shadow {
+    box-shadow: 0 18px 18px 0 rgba(253, 92, 14, 0.3);
+}
+
+#app .am-pull-to-refresh-content-wrapper {
+    overflow: initial;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    width : 0;
+    height: 0;
+    color : transparent;
+}
+
+/* 限制地图mark覆盖物图标大小 */
+.csssprite {
+    width     : 32px !important;
+    height    : 32px !important;
+    min-width : 32px !important;
+    min-height: 32px !important;
+    max-width : 32px !important;
+    max-height: 32px !important;
+}
+
+/* ant tabs 全局样式覆盖 去除下划线*/
+.am-tabs-default-bar-tab {
+    border-bottom: none !important;
+}
+.am-tabs-default-bar-tab::after {
+    height: 0 !important;
+}
